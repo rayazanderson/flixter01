@@ -1,0 +1,36 @@
+@import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Bungee+Hairline&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Geo:400,400i&display=swap');
+
+.booyah-box {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: #fff;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 20px;
+  border-color: #C68E17,#A76B00,#894D00;
+}
+
+
+.navbar {
+  font-family: 'Geo', sans-serif;
+  font-weight: 200;
+  box-shadow: 0px 1px 3px #2a2a2a;
+  background: image_url('prism.png');
+}
+
+.navbar-inverse a.navbar-brand {
+  font-family: 'Geo', sans-serif;
+  font-weight: 100;
+  color: white;
+}
+
+body {
+  background: image_url('congruent_pentagon.png');
+  color: #FFFAF0;
+  font-family: 'Bungee Hairline', cursive;
+}
+
