@@ -3,7 +3,7 @@ class CoursesController < ApplicationController
     @courses = Course.all
   end
 
-   def create
+  def create
     @course = current_user.courses.create(course_params)
     redirect_to instructor_course_path(@course)
   end
@@ -13,3 +13,8 @@ class CoursesController < ApplicationController
   def course_params
     params.require(:course).permit(:title, :description, :cost)
   end
+
+  def show
+    @course = Course.find(params[:id])
+  end
+end
