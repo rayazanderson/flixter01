@@ -8,6 +8,7 @@ class Instructor::LessonsController < ApplicationController
   end
 
   def show
+    
   end
 
   def create
@@ -23,9 +24,9 @@ class Instructor::LessonsController < ApplicationController
     end
   end
 
-  helper_method :current_course
-  def current_course
-    @current_course ||= Course.find(params[:course_id])
+  helper_method :current_lesson
+  def current_lesson
+    @current_lesson ||= Lesson.find(params[:id])
   end
 
 
