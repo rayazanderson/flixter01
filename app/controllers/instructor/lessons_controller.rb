@@ -8,7 +8,7 @@ class Instructor::LessonsController < ApplicationController
   end
 
   def show
-    
+
   end
 
   def create
@@ -31,6 +31,6 @@ class Instructor::LessonsController < ApplicationController
 
 
   def lesson_params
-    params.require(:lesson).permit(:title, :subtitle)
+    params.require(:lesson).permit(:title, :subtitle, :video)
   end
 end
