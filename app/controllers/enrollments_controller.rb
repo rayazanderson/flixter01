@@ -1,5 +1,6 @@
 class EnrollmentsController < ApplicationController
   before_action :authenticate_user!
+  skip_before_action :verify_authenticity_token
 
   def create
     current_user.enrollments.create(course: current_course)
