@@ -1,3 +1,6 @@
+<script>
+  alert('hi');
+</script>
 
 <br />
 
@@ -12,7 +15,7 @@
   </div>
 
   <ul>
-   <% section.lessons.rank(:row_order).each do |lesson| %>
+   <% current_course.sections.each do |section| %>
       <li>
         <%= section.title %>
         <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'float-right btn btn-primary btn-sm' %>
