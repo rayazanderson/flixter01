@@ -21,6 +21,10 @@ class Instructor::CoursesController < ApplicationController
     @course = Course.find(params[:id])
   end
 
+  def index
+    @courses = Course.all
+  end
+
   private
 
   def require_authorized_for_current_course
