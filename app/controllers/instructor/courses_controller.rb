@@ -1,6 +1,7 @@
 class Instructor::CoursesController < ApplicationController
   before_action :authenticate_user!
-  before_action :require_authorized_for_current_course, only: [:show]
+  before_action :require_authorized_for_current_course, only: [:create]
+  before_action :require_authorized_for_current_section, only: [:update]
   skip_before_action :verify_authenticity_token
 
 
@@ -18,8 +19,7 @@ class Instructor::CoursesController < ApplicationController
   end
 
   def show
-    @course = Course.find(params[:id])
-  end
+    @section = Section.new
 
   def index
     @courses = Course.all
