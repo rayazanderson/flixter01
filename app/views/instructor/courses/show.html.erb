@@ -29,7 +29,7 @@
 
 <div class="booyah-box col-10 offset-1">
   <h1 class="text-center"><%= current_course.title %></h1>
-  <%= image_tag current_course.image, class: 'img-fluid' %>
+  <current_course.image.to_s>
   <br />
    <%= link_to 'Preview As Student...', course_path(current_course), class: 'btn btn-warning float-right' %>
   <br class="clr" />
@@ -97,7 +97,6 @@
         <%= f.submit "Add a section", class: 'btn btn-primary' %>
         <br />
         <br />
-      <% end %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
