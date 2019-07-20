@@ -29,10 +29,23 @@
 
 <div class="booyah-box col-10 offset-1">
   <h1 class="text-center"><%= current_course.title %></h1>
-  <current_course.image.to_s>
+  <%= image_tag current_course.image.to_s, class: 'img-fluid' %>
   <br />
    <%= link_to 'Preview As Student...', course_path(current_course), class: 'btn btn-warning float-right' %>
   <br class="clr" />
+
+    <div class="row">
+    <div class="col-sm-4 col-12 text-center">
+      <span class="badge badge-default">
+      <%= number_to_currency current_course.cost %>
+      </span>
+
+  </div>
+
+    <div class="col-sm-8 col-12">
+      <%= current_course.description %>
+    </div>
+  </div>
 
   <div class="text-center">
     <!-- Button trigger modal -->
@@ -77,7 +90,7 @@
       </li>
     <% end %>
   </ul>
-</div>>
+</div>
 
 
 <!-- Modal -->
@@ -103,24 +116,6 @@
         <%= f.submit "Add a section", class: 'btn btn-primary' %>
         </div>
       <% end %>
-    </div>
-  </div>
-</div>
-
-
-<div class="booyah-box col-10 offset-1">
-  <h1><%= @course.title %></h1>
-  <br />
-  <div class="row">
-    <div class="col-sm-4 col-12 text-center">
-      <span class="badge badge-default">
-      <%= number_to_currency @course.cost %>
-      </span>
-
-  </div>
-
-    <div class="col-sm-8 col-12">
-      <%= @course.description %>
     </div>
   </div>
 </div>
