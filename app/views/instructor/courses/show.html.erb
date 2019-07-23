@@ -42,7 +42,8 @@
   <br class="clr" />
 
   <div class="text-left">
-    <!-- Button trigger modal -->
+    
+<!--  trigger section modal -->
     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newSectionModal">
       Add a new section...
     </button>
@@ -55,7 +56,8 @@
           <span class="fas fa-brain"></span>
           <%= section.title %>
         </div>
-        <!-- Button trigger modal -->
+
+<!-- trigger lesson modal -->
         <button type="button" class="btn btn-primary btn-lg float-right new-lesson-button" data-toggle="modal" data-target="#newLessonModal" data-lesson-url="<%= instructor_section_lessons_path(section) %>">
           New Lesson...
         </button>
