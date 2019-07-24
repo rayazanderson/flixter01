@@ -68,9 +68,9 @@ source 'https://rails-assets.org' do
 end
 
 ## Gemfile for Rails 3+, Sinatra, and Merb
-gem 'bootstrap', '~> 4.3.1'
 gem 'simple_form'
 gem 'devise'
+gem 'bootstrap', '4.0.0.alpha6'
 gem 'carrierwave', '>= 2.0.0.rc', '< 3.0'
 gem 'figaro'
 gem "fog-aws"
@@ -80,5 +80,6 @@ gem 'stripe'
 gem 'ranked-model'
 gem 'ranked-model'
 gem "font-awesome-rails"
+
 
 
