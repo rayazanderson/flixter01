@@ -4,10 +4,6 @@ class Instructor::CoursesController < ApplicationController
   skip_before_action :verify_authenticity_token
 
 
-  def new
-    @course = Course.new
-  end
-
   def create
     @course = current_user.courses.create(course_params)
      if @course.valid?
@@ -27,6 +23,10 @@ class Instructor::CoursesController < ApplicationController
   end
 
   private
+
+  def current_section
+    @current_section ||= Section.find(params[:id])
+  end
 
   def require_authorized_for_current_course
     if current_course.user != current_user
