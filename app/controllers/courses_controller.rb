@@ -7,8 +7,4 @@ class CoursesController < ApplicationController
     @course = Course.find(params[:id])
   end
 
-    def course_params
-    params.require(:course).permit(:title, :description, :cost, :image)
-  end
-
 end
