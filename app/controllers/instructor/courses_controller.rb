@@ -9,7 +9,7 @@ class Instructor::CoursesController < ApplicationController
 
   def create
     @course = current_user.courses.create(course_params)
-     if @course.valid?
+    if @course.valid?
       redirect_to instructor_course_path(@course)
     else
       render :new, status: :unprocessable_entity
@@ -21,19 +21,11 @@ class Instructor::CoursesController < ApplicationController
     @lesson = Lesson.new
   end
 
-  def index
-    @courses = Course.all
-  end
-
   private
-
-  def current_section
-    @current_section ||= Section.find(params[:id])
-  end
 
   def require_authorized_for_current_course
     if current_course.user != current_user
-      render plain: "Unauthorized", status: :unauthorized
+      render plain: "Unauthorized", status: :unauthorized 
     end
   end
 
