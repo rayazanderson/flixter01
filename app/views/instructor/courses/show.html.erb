@@ -2,7 +2,7 @@
    $(function() {
     $('.new-lesson-button').click(function( event ) {
        var lessonUrl = $( event.target).data('lesson-url');
-      alert( lessonUrl );
+      alert( 'Ready to add more lessons?' );
       $('#newLessonForm').attr('action', lessonUrl);
     });
 
