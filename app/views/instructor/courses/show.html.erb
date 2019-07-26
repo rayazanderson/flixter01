@@ -70,7 +70,7 @@
 
     <ul class="lessons">
       <% section.lessons.rank(:row_order).each do |lesson| %>
-        <li data-update-url="<%= instructor_lesson_path lesson %>">
+        <li data-update-url="<%= instructor_lesson_path(lesson) %>">
           <div class="row">
             <div class="col-1">
                 <br />
@@ -134,7 +134,7 @@
         </button>
         <h4 class="modal-title" id="newLessonModal">Add a new lesson</h4>
       </div>
-      <%= simple_form_for @lesson, url: "#" do |f| %>
+      <%= simple_form_for @lesson, url: "#" , html: { id: 'newLessonForm' } do |f| %>
         <div class="modal-body">
           <%= f.input :title %>
           <%= f.input :subtitle %>
