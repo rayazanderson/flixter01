@@ -24,8 +24,8 @@
 
 
 <!--  teachers only -->
-
-  <h1>What I'm Teaching</h1>
+ <% if user_signed_in? %>
+  <h2>What I'm Teaching</h2>
 <% current_user.courses.each do |course| %>
   <h3 class="text-center">
     <%= link_to course.title, course_path(course) %>
@@ -45,5 +45,5 @@
   <br class="clr" />
 <% end %>
 
-
+<% end %>
 </div>
