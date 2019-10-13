@@ -15,7 +15,7 @@
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <%= link_to 'Grammable', root_url, class: 'navbar-brand' %>
+    <%= link_to 'Flixter', root_url, class: 'navbar-brand' %>
 
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav mr-auto mt-2 mt-md-0">
@@ -25,9 +25,9 @@
       </ul>
     <ul class="navbar-nav">
       <% if user_signed_in? %>
-        <li class="nav-item">
-          <%= link_to 'My Dashboard', dashboard_path, class: 'nav-link' %>
-        </li>
+          <li class="nav-item">
+            <%= link_to 'My Dashboard', dashboard_path, class: 'nav-link' %>
+          </li>
           <li class="nav-item">
             <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
           </li>
@@ -68,16 +68,18 @@
       <div class="col-12 col-sm-3">
         <b>About</b>
         <br />
-        <%= link_to 'Team', '#' %>
+        <%= link_to 'Team', team_path %>
         <br />
-        <%= link_to 'Careers', '#' %>
+        <%= link_to 'Career', career_path %>
         <br />
         <%= link_to 'Privacy Policy', privacy_path %>
       </div>
       <div class="col-12 col-sm-3">
         <b>Contact</b>
         <br />
-        my@email.com
+        <a href="mailto:rayazand@gmail.com">
+        me@email.com
+        </a>
         <br />
         
         <br />
@@ -88,8 +90,15 @@
           <br />
           <br />
           <%= link_to 'https://github.com/rayazanderson' do %>
-          <span class="fa fa-github-square-2x social-button"></span>
+          <span class="fa fa-github-square fa-2x social-button"></span>
           <% end %>
+          <%= link_to 'https://www.linkedin.com/in/raya-anderson' do %>
+          <span class="fa fa-linkedin fa-2x social-button"></span>
+          <% end %>
+      
+      </div>
+
+      
       </div>
     </div>
   </div>
